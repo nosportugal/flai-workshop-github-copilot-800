@@ -1,9 +1,12 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="images/nos-logo-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="images/nos-logo-light.png">
-    <img alt="NOS Logo" src="images/nos-logo-light.png" width="200">
-  </picture>
+    <source media="(prefers-color-scheme: dark)" srcset="images/flai-logo-dark.svg?v=2" />
+    <source media="(prefers-color-scheme: light)" srcset="images/flai-logo-light.svg?v=2" />
+    <img width="180" alt="flAI Logo" src="images/flai-logo-dark.svg?v=2" />
+</picture>
+  <br/>
+  <br/>
+  <a href="https://flai.gh.nos.pt/">https://flai.gh.nos.pt</a>
 </p>
 
 # Build applications with GitHub Copilot agent mode
@@ -24,6 +27,35 @@ In this exercise, we will prompt GitHub Copilot agent mode to create a complete 
 - **What you'll build**: You'll use GitHub Copilot agent mode to create a fitness application as the gym teacher of a high school.
 - **Prerequisites**: Skills Exercise: <a href="https://github.com/nosportugal/flai-workshop-github-copilot-100">Getting Started with GitHub Copilot</a>.
 - **How long**: This course takes less than one hour to complete.
+
+## Application Architecture
+
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#4a90d9', 'primaryTextColor': '#fff', 'primaryBorderColor': '#2d5a87', 'lineColor': '#5c6bc0', 'secondaryColor': '#81c784', 'tertiaryColor': '#fff3e0'}, 'flowchart': {'nodeSpacing': 50, 'rankSpacing': 80, 'padding': 40}}}%%
+flowchart LR
+    User((👤 User))
+    
+    subgraph Codespaces [☁️ GitHub Codespaces]
+        subgraph App [🏋️ OctoFit Tracker App]
+            Frontend[⚛️ React<br/>Frontend]
+            Backend[🐍 Django<br/>Backend]
+            Database[(🍃 MongoDB<br/>Database)]
+        end
+    end
+    
+    User --> Frontend
+    Frontend <--> Backend
+    Backend <--> Database
+    
+    style User stroke-width:3px
+    style Frontend stroke-width:3px,fill:#b3e5fc,color:#000
+    style Backend stroke-width:3px,fill:#c8e6c9,color:#000
+    style Database stroke-width:3px,fill:#ffe0b2,color:#000
+    style Codespaces stroke-width:3px
+    style App stroke-width:3px,stroke:#ff6b35
+    
+    linkStyle default stroke-width:3px
+```
 
 In this exercise, you will:
 

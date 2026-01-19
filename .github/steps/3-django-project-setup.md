@@ -14,6 +14,7 @@ In this step, we will accomplish the following:
 Copy and paste the following prompt(s) in the GitHub Copilot Chat and select the "Agent" instead of "Ask" or "Edit" from the drop down where you are inserting the prompt.
 
 > [!NOTE]
+>
 > - Keep in mind that the Copilot agent mode is conversational so it may ask you questions and you can ask it questions too.
 > - Wait a moment for the Copilot to respond and press the `Continue` button to execute commands presented by Copilot agent mode.
 > - Keep files created and updated by Copilot agent mode until it is finished.
@@ -40,10 +41,12 @@ See the [VS Code Docs: Prompt Files](https://code.visualstudio.com/docs/copilot/
 >```
 
 > [!NOTE]
+>
 > - Wait a moment for the Copilot to respond and press the `Continue` button to execute each command presented by Copilot agent mode.
 > - Keep files created and updated until the Copilot agent mode has finished.
 
 > [!IMPORTANT]
+>
 > - Don't start the Python Django app in the way that GitHub Copilot agent mode suggests hit **cancel** when you see this image.
 
 <img src="https://github.com/user-attachments/assets/02a875c1-19a4-417b-ab03-aefbbe2186d4" width=50% height=50%>
@@ -66,7 +69,7 @@ Now let's create a prompt file of our own that we can share with other staff to 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
 > ```prompt
-> Let's add the following to a prompt file called `update-octofit-tracker-app.prompt.md` in the `.github/prompts` directory and add mode: 'agent' and model: GPT-4.1 to the prompt file.
+> Let's add the following to a prompt file called `update-octofit-tracker-app.prompt.md` in the `.github/prompts` directory and add the description "Update Django project files for octofit-tracker app".
 >
 > # Django App Updates
 >
@@ -96,6 +99,7 @@ Copy/paste the following prompt in the GitHub Copilot Chat and select the "Agent
 >
 
 > [!IMPORTANT]
+>
 > - Don't start the Python Django app in the way that GitHub Copilot agent mode suggests hit **cancel** when you see this image.
 
 <img src="https://github.com/user-attachments/assets/02a875c1-19a4-417b-ab03-aefbbe2186d4" width=50% height=50%>

@@ -19,6 +19,7 @@ In this step, we will accomplish the following:
 Copy and paste the following prompt(s) in the GitHub Copilot Chat and select the "Agent" instead of "Ask" or "Edit" from the drop down where you are inserting the prompt.
 
 > [!NOTE]
+>
 > - Keep in mind that the Copilot agent mode is conversational so it may ask you questions and you can ask it questions too.
 > - Wait a moment for the Copilot to respond and press the continue button to execute commands presented by Copilot agent mode.
 > - Keep files created and updated by Copilot agent mode until it is finished.
@@ -40,6 +41,9 @@ Copy and paste the following prompt(s) in the GitHub Copilot Chat and select the
 > 4. Import bootstrap css in the src/index.js file.
 > 5. Don't change .gitignore file
 >```
+
+> [!WARNING]
+> ⏰ This step will take approximately 1-2 minutes to complete.
 
 ### :keyboard: Activity: Update the octofit-tracker frontend React components
 
@@ -87,7 +91,31 @@ Once you click `Continue` it should look similar the following:
 
 <img alt="react-frontend-app" src="https://github.com/user-attachments/assets/f7f1a076-c259-49f6-8aa5-9ebcd5f0698d" width=50% height=50%>
 
-### :keyboard: Activity: Let's add some formatting, structuring, and styling to the octofit tracker app
+<details>
+<summary> No data displayed? Ensure the backend is running</summary><br/>
+
+The React app fetches data from the Django backend REST API on port 8000. If no data is displayed, the backend may not be running.
+
+1. **Check if the backend is already running:**
+   - Look at the **Ports** tab in VS Code - port 8000 should be listed and forwarded
+   - Or check your terminals for a running Django server
+
+2. **If the backend is NOT running, start it:**
+   - Open the **Run and Debug** panel (`Ctrl+Shift+D` or `Cmd+Shift+D`)
+   - Select **"Launch Django Backend"** from the dropdown
+   - Click the green **Start Debugging** button (▶️)
+   - Wait until you see: `Starting development server at http://0.0.0.0:8000/`
+
+3. **Verify the backend is accessible:**
+   - Port 8000 should appear in the **Ports** tab
+   - You can test by visiting the API URL in your browser
+
+> [!IMPORTANT]
+> Keep the Django backend running in a separate debug session while you work with the React frontend.
+
+</details>
+
+### :sparkles: Activity: Let's add some formatting, structuring, and styling to the octofit tracker app
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
@@ -106,7 +134,7 @@ Once you click `Continue` it should look similar the following:
 >   - Consistent table layouts for all components data.
 >```
 
-### :keyboard: Optional Activity: Let's make the octofit tracker app look nice, pretty, and add some color
+### :sparkles: Optional Activity: Let's make the octofit tracker app look nice, pretty, and add some color
 
 > ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
 >
@@ -125,9 +153,78 @@ Once you click `Continue` it should look similar the following:
 > - Add a favicon to the app and make it look nice.
 >```
 
-### :keyboard: Optional Activity: Iterate on the appearance and try different models
+### :bug: Optional Activity: Let's fix some issues present in the React frontend app
+
+The page might not look exactly as expected. Let's use Copilot agent mode to help us fix any issues present in the React frontend app. Copy/paste the following prompt in the GitHub Copilot Chat and select the "Agent" instead of "Ask" or "Edit" from the drop down where you are inserting the prompt.
+
+#### :bug: The users table is missing name and the username
+
+> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+>
+> ```prompt
+> The users page is missing the name and the username for each user
+> ```
+
+#### :bug: The activities page has an invalid date
+
+> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+>
+> ```prompt
+> In the activities page, the date is invalid
+> ```
+
+#### :bug: The teams page is not displaying the correct number of members
+
+> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+>
+> ```prompt
+> The teams page is not displaying the correct number of members. All teams show 0 members
+> ```
+
+#### :bug: The leaderboard page is not displaying the Team correctly and total calories is 0
+
+> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+>
+> ```prompt
+> The leaderboard page has the following issues for each user:
+> - is not displaying the Team correctly (currently showing N/A)
+> - total calories is 0
+> ```
+
+#### :bug: The workouts page is not displaying some fields (with screenshot)
+
+We can even provide a screenshot to help Copilot agent mode understand the issue better. First, take a screenshot of the workouts page showing the missing fields and paste it in the chat but don't press ENTER just yet. Then, copy/paste the following prompt in the same chat and submit both the screenshot and the prompt together.
+
+> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+>
+> ```prompt
+> The workouts page is not displaying some fields. Here's an example of Thor
+> ```
+
+#### :bug: The home page cards are not navigating to the correct pages
+
+> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+>
+> ```prompt
+> On the home page, when I click the cards Users, Activities or Leaderboard I want to navigate to the correspondent pages.
+> ```
+
+### :sparkles: Optional Activity: Let's add a new feature to edit user details using the Plan mode
+
+In this optional activity, let's use Copilot Plan mode to help us add a new feature to edit user details. Copy/paste the following prompt in the GitHub Copilot Chat and select the "Plan" instead of "Ask", "Edit" or "Agent" from the drop down where you are inserting the prompt.
+
+> ![Static Badge](https://img.shields.io/badge/-Prompt-text?style=flat-square&logo=github%20copilot&labelColor=512a97&color=ecd8ff)
+>
+> ```prompt
+> I want to be able to edit each user personal details including the team the user belongs to.
+> ```
+
+After Copilot Plan mode provides a plan, you can agree or change the plan. Once you agree on the plan, just hit "Start Implementation" and Copilot will start generating the code for you.
+
+### You did it! 💪
 
 > [!TIP]
+>
 > - Try creating your own prompts to change the application appearance, add features, and try different models.
 
 1. Now that we have created the React frontend for all application components, let's check our changes in to our `build-octofit-app` branch.
