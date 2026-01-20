@@ -1,3 +1,47 @@
+## Step 0: What we will build?
+
+In this exercise, you will build **OctoFit Tracker**, a fitness application that helps users track their fitness goals and progress. The application will have a React frontend, a Django backend, and a MongoDB database.
+
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#4a90d9', 'primaryTextColor': '#fff', 'primaryBorderColor': '#2d5a87', 'lineColor': '#5c6bc0', 'secondaryColor': '#81c784', 'tertiaryColor': '#fff3e0'}, 'flowchart': {'nodeSpacing': 50, 'rankSpacing': 80, 'padding': 40}}}%%
+flowchart LR
+    User((👤 User))
+    
+    subgraph Codespaces [☁️ GitHub Codespaces]
+        subgraph App [🏋️ OctoFit Tracker App]
+            Frontend[⚛️ React<br/>Frontend]
+            Backend[🐍 Django<br/>Backend]
+            Database[(🍃 MongoDB<br/>Database)]
+        end
+    end
+    
+    User --> Frontend
+    Frontend <--> Backend
+    Backend <--> Database
+    
+    style User stroke-width:3px
+    style Frontend stroke-width:3px,fill:#b3e5fc,color:#000
+    style Backend stroke-width:3px,fill:#c8e6c9,color:#000
+    style Database stroke-width:3px,fill:#ffe0b2,color:#000
+    style Codespaces stroke-width:3px
+    style App stroke-width:3px,stroke:#ff6b35
+    
+    linkStyle default stroke-width:3px
+```
+
+<details>
+<summary>❓What are React, Django, and MongoDB?</summary><br/>
+
+**⚛️ React** is a JavaScript library for building user interfaces. It allows you to create interactive, dynamic web applications with reusable components. React updates the UI efficiently whenever your data changes, making it perfect for building responsive frontend applications.
+
+**🐍 Django** is a Python web framework that provides a robust backend for handling business logic, APIs, and database operations. Django includes built-in features like authentication, admin panels, and ORM (Object-Relational Mapping) that speed up backend development.
+
+**🍃 MongoDB** is a NoSQL database that stores data in flexible, JSON-like documents instead of rigid tables. MongoDB is great for applications that need flexibility in their data structure and can scale easily as your application grows.
+
+Together, these three technologies form a powerful stack for building modern, scalable applications!
+
+</details>
+
 ## Step 1: Hello GitHub Copilot agent mode
 
 Welcome to your **"Build applications with GitHub Copilot agent mode"** exercise! :robot:
@@ -51,6 +95,7 @@ Monitors the correctness of code edits and terminal command output and iterates 
 Great work! Let's ask copilot for help starting a branch so we can do some customizing.
 
 > [!NOTE]
+>
 > - Keep in mind that the Copilot agent mode is conversational so it may ask you questions and you can ask it questions too.
 > - Wait a moment for the Copilot to respond and press the **Continue** button to execute commands presented by Copilot agent mode.
 
@@ -70,7 +115,7 @@ Great work! Let's ask copilot for help starting a branch so we can do some custo
 
    Copilot agent mode will respond and prompt you to **continue** to execute the command.<br/>
 
-   <img src=https://github.com/user-attachments/assets/d1652fc1-78e5-49c6-9303-b455815eea8f width=40% height=40%>
+   <img src=<https://github.com/user-attachments/assets/d1652fc1-78e5-49c6-9303-b455815eea8f> width=40% height=40%>
 
 1. Now that we are happy with the command, press the `Continue` button to let Copilot agent mode run it for us. No need to copy and paste!
 
