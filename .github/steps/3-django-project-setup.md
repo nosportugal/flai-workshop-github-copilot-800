@@ -3,6 +3,28 @@
 > [!NOTE]
 > **Behind the scenes:** This exercise uses custom instruction files that help guide GitHub Copilot's responses. The instruction files `.github/instructions/octofit_tracker_setup_project.instructions.md` and `.github/instructions/octofit_tracker_django_backend.instructions.md` contain Django backend guidelines, MongoDB configuration, and project structure that Copilot references when generating code for this step.
 
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#4a90d9', 'primaryTextColor': '#fff', 'primaryBorderColor': '#2d5a87', 'lineColor': '#5c6bc0', 'secondaryColor': '#81c784', 'tertiaryColor': '#fff3e0'}, 'flowchart': {'nodeSpacing': 50, 'rankSpacing': 80, 'padding': 40}}}%%
+flowchart LR
+    subgraph Codespaces [☁️ GitHub Codespaces]
+        subgraph App [🏋️ OctoFit Tracker App]
+            Backend[🐍 Django<br/>Backend]
+            Database[(🍃 MongoDB<br/>Database)]
+        end
+    end
+    
+    Backend <--> Database
+    
+    style Backend stroke-width:4px,fill:#c8e6c9,color:#000,stroke:#2e7d32
+    style Database stroke-width:4px,fill:#ffe0b2,color:#000,stroke:#ef6c00
+    style Codespaces stroke-width:3px
+    style App stroke-width:3px,stroke:#ff6b35
+    
+    linkStyle default stroke-width:3px
+```
+
+> **🎯 Current Focus:** In this step, we're setting up the **Django Backend** and **MongoDB Database**.
+
 In this step, we will accomplish the following:
 
 - Set up the octofit_db MongoDB database structure.
