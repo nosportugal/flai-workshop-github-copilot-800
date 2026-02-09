@@ -96,6 +96,14 @@ Together, these three technologies form a powerful stack for building modern, sc
 1. If this is your first time using GitHub Copilot, you will have to accept the usage terms to continue.
     - Click the **Accept** button to continue.
 
+#### 🤖 AGENTS.md
+
+The `AGENTS.md` file contains instructions and boundaries for the Copilot agent, ensuring it follows project standards and avoids restricted actions. Learn more about the specification at [agents.md](https://agents.md).
+
+1. Locate the `AGENTS.md` file in the file explorer and open it.
+1. Read through the file to understand the boundaries and standards for the Copilot agent.
+1. For more details on the AGENTS.md specification, visit [https://agents.md](https://agents.md).
+
 ### :keyboard: Activity: Use Copilot agent mode to create a branch and publish it. 🙋
 
 Great work! Let's ask copilot for help starting a branch so we can do some customizing.
