@@ -39,7 +39,7 @@ You can also use these agents directly within the GitHub.com UI:
 2. Click on the agent selector to see available agents.
 3. Choose the agent you wish to use.
 
-<img src="https://raw.githubusercontent.com/nosportugal/flai-workshop-github-copilot-800/refs/heads/main/images/agents-selector-github.png" alt="Agent Selector" width=25% align=right>
+<img src="https://raw.githubusercontent.com/nosportugal/flai-workshop-github-copilot-800/refs/heads/main/images/agents-selector-github.png" alt="Agent Selector" width=35%>
 
 **In VS Code:**
 
@@ -49,7 +49,7 @@ To use a custom agent:
 2. Type `@` followed by the agent name (e.g., `@github-repo-initializer`).
 3. Enter your prompt or request.
 
-<img src="https://raw.githubusercontent.com/nosportugal/flai-workshop-github-copilot-800/refs/heads/main/images/agents-selector-vscode.png" alt="VS Code Agent Selector" width=25% align=right>
+<img src="https://raw.githubusercontent.com/nosportugal/flai-workshop-github-copilot-800/refs/heads/main/images/agents-selector-vscode.png" alt="VS Code Agent Selector" width=35%>
 
 For more details on creating and using custom agents, refer to the [official documentation on using custom agents](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents#using-custom-agents).
 
