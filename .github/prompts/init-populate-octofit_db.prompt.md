@@ -1,6 +1,6 @@
 ---
 description: 'Setup, configure, and populate the octofit_db database with test data for the Octofit Tracker Django app.'
-model: Claude Sonnet 4.5 (copilot)
+model: Claude Sonnet 4.6 (copilot)
 ---
 
 # Environment Setup
