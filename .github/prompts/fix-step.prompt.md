@@ -1,6 +1,6 @@
 ---
 description: 'Diagnose and fix GitHub Actions validation issues for any workshop step'
-model: Claude Sonnet 4.6 (copilot)
+model: Claude Sonnet 4.6
 ---
 
 # Workshop Step Troubleshooter
