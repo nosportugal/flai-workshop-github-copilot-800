@@ -9,14 +9,14 @@ on:
   issue_comment:
     types: [created]
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: {}
 
 jobs:
   copilot:
-    uses: >-
-      nosportugal/github-actions/.github/workflows/copilot-agent-helper.yml@main
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: nosportugal/github-actions/.github/workflows/copilot-agent-helper.yml@main
     with:
       auto_hide_previous_comments: true
       acknowledgment_reaction: "eyes"

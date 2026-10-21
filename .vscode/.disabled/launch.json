@@ -2,42 +2,37 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Django Backend",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/octofit-tracker/backend/manage.py",
-            "args": [
-                "runserver",
-                "0.0.0.0:8000"
-            ],
-            "django": true,
-            "justMyCode": true,
-            "python": "${workspaceFolder}/octofit-tracker/backend/venv/bin/python",
-            "env": {
-                "PYTHONPATH": "${workspaceFolder}/octofit-tracker/backend/venv/bin/python",
-                "VIRTUAL_ENV": "${workspaceFolder}/octofit-tracker/backend/venv",
-                "PATH": "${workspaceFolder}/octofit-tracker/backend/venv/bin:${env:PATH}",
-                "CODESPACE_NAME": "${env:CODESPACE_NAME}"
-            }
-        },
-        {
-            "name": "Launch React Frontend",
+            "name": "Launch Express Backend",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceFolder}/octofit-tracker/frontend/node_modules/react-scripts/scripts/start.js",
+            "cwd": "${workspaceFolder}/octofit-tracker/backend",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ],
+            "env": {
+                "PORT": "8000"
+            },
+            "outputCapture": "std"
+        },
+        {
+            "name": "Launch Vite Frontend",
+            "type": "node",
+            "request": "launch",
             "cwd": "${workspaceFolder}/octofit-tracker/frontend",
             "runtimeExecutable": "npm",
             "runtimeArgs": [
-                "start"
+                "run",
+                "dev",
+                "--",
+                "--host",
+                "0.0.0.0"
             ],
-            "port": 3000,
-            "env": {
-                "REACT_APP_CODESPACE_NAME": "${env:CODESPACE_NAME}"
-            },
             "serverReadyAction": {
                 "action": "openExternally",
-                "pattern": "Compiled successfully!",
-                "uriFormat": "http://0.0.0.0:3000"
+                "pattern": "Local:",
+                "uriFormat": "http://localhost:5173"
             },
             "outputCapture": "std"
         }
@@ -46,8 +41,8 @@
         {
             "name": "Launch OctoFit Tracker (Backend + Frontend)",
             "configurations": [
-                "Launch Django Backend",
-                "Launch React Frontend"
+                "Launch Express Backend",
+                "Launch Vite Frontend"
             ],
             "presentation": {
                 "hidden": false,
